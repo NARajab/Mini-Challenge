@@ -4,17 +4,17 @@ const { Op } = require("sequelize");
 const bcrypt = require("bcryptjs");
 const { Role } = require("../../app/models");
 
-const names = ["Johnny", "Fikri", "Brian", "Ranggawarsita", "Jayabaya"];
+const names = ["John"];
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const password = "123456";
+    const password = "12345678";
     const encryptedPassword = bcrypt.hashSync(password, 10);
     const timestamp = new Date();
 
     const role = await Role.findOne({
       where: {
-        name: "CUSTOMER",
+        name: "ADMIN",
       },
     });
 
