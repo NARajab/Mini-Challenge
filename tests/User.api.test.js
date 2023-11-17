@@ -26,8 +26,8 @@ describe("API Login", () => {
 describe("API Register", () => {
   it("success register", async () => {
     const user = {
-      name: "membertest5",
-      email: "membertest5@binar.co.id",
+      name: "membertest6",
+      email: "membertest6@binar.co.id",
       password: "123456",
     };
     const response = await request(app).post("/v1/auth/register").send(user);
